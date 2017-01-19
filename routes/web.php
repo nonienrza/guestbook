@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('check');
+// });
+
+Route::get('/','VisitorController@check');
+Route::post('/','VisitorController@semak');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
